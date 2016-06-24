@@ -12,7 +12,7 @@
         <link rel="stylesheet" type="text/css" href="/vendor/rareloop/primer-core/css/primer.min.css" media="screen, handheld" />
 
     </head>
-    <body class="{{ bodyClass }} environment-{{ environment }}">
+    <body class="{{ primer.bodyClass }} environment-{{ primer.environment }}">
 
         {# Insert the items that we have requested #}
         {{ primer.items|raw }}
