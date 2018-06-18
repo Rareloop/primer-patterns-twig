@@ -7,15 +7,23 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="format-detection" content="telephone=no">
-                
+
         <!-- Primer Assets -->
         <link rel="stylesheet" type="text/css" href="/vendor/rareloop/primer-core/css/primer.min.css" media="screen, handheld" />
 
     </head>
     <body class="{{ primer.bodyClass }} environment-{{ primer.environment }}">
 
-        {# Insert the items that we have requested #}
-        {{ primer.items|raw }}
+        <div class="primer-container">
+            {% include 'sidebar.twig' %}
+
+            <main class="primer-main">
+                {% block content %}
+                    {# Insert the items that we have requested #}
+                    {{ primer.items|raw }}
+                {% endblock %}
+            </main>
+        </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
